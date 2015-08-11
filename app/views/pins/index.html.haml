@@ -1,0 +1,23 @@
+/ Start of StatCounter Code for Default Guide
+:javascript
+	var sc_project=10567942; 
+	var sc_invisible=1; 
+	var sc_security="ab22cbc9"; 
+	var scJsHost = (("https:" == document.location.protocol) ?
+	"https://secure." : "http://www.");
+	document.write("<sc"+"ript type='text/javascript' src='" +
+	scJsHost+
+	"statcounter.com/counter/counter.js'></"+"script>");
+%noscript
+	.statcounter
+		%a{:href => "http://statcounter.com/shopify/", :target => "_blank", :title => "shopify traffic\nstats"}
+			%img.statcounter{:alt => "shopify traffic stats", :src => "http://c.statcounter.com/10567942/0/ab22cbc9/1/"}/
+/ End of StatCounter Code for Default Guide
+#pins.transitions-enabled
+	- @pins.each do |pin|
+		.box.panel.panel-default
+			= link_to (image_tag pin.image.url), pin
+			%h2= link_to pin.title, pin
+			%p.user
+				Submitted by
+				= pin.user.username
