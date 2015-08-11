@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'info/about'
+
   devise_for :users
   resources :pins do
   	member do 
